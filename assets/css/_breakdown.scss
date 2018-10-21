@@ -1,0 +1,13 @@
+// make footer take 2 lines instead of 1 on smaller screens
+@media only screen and (max-width : 768px) {
+    .footer {
+        line-height: calc( 55px / 2);
+    }
+}
+// make footer take 3 lines instead of 1 on very small screens
+@media only screen and (min-width : 280px) and (max-width : 460px) {
+    .footer {
+        height: 64px;
+        line-height: calc( 55px / 3);
+    }
+}

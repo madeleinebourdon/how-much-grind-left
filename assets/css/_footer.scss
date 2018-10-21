@@ -1,0 +1,16 @@
+// footer
+.footer {
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 55px; /* Vertically center the text there */
+    background-color: #141414;
+
+    & .row {
+        margin: auto;
+    }
+  }
+  .terms {
+      font-size: 0.8rem;
+  }

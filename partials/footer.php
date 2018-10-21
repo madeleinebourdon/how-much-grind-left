@@ -1,8 +1,12 @@
 <footer class="footer">
-    <div class="container">
-        <a href=""><img src="assets/img/twitter-24.png" alt="Twitter"></a> 
-        <a href=""><img src="assets/img/message-24.png" alt="Mail"></a> 
-        | <span class="text-muted terms">Pokémon and Pokémon character names are trademarks of Nintendo.</span>
+    <div class="container row">
+        <div class="col-md-2 col-xl-6 text-xs-center text-md-left">
+            <a href=""><img src="assets/img/twitter-24.png" alt="Twitter"></a> 
+            <a href=""><img src="assets/img/message-24.png" alt="Mail"></a> 
+        </div>
+        <div class="col-md-10 col-xl-6">        
+         <span class="text-muted terms">Pokémon and Pokémon character names are trademarks of Nintendo.</span>
+        </div>
     </div>
 </footer>
 

@@ -11,63 +11,37 @@ body {
     font-size: 18px;
 }
 
-.navbar, .dropdown-menu {
-    background-color: #0c2461!important;
-}
-.dropdown-item {
-    color: rgba(255,255,255,.5);
-
-    &:focus, &:hover {
-        background-color: inherit;
-        color: rgba(255,255,255,.75);
-    }
-}
-
-.main {
-    background-color: white;
-    padding: 1rem;
-    min-height: calc(100vh - 59px - 60px);
-}
-
-$posStroke: 6px;
-$negStroke: calc(#{$posStroke} - 2 * #{$posStroke});
-$strokeBlur: 3px; 
+@import '_navbar';
 
 .navbar-brand, h1 {
     font-family: "pokemon";
     color: #ffcb05!important;
-
-}
-
-.navbar-brand {
-    -webkit-text-stroke: 1px #0c2461;
-}
-
+}  
 h1 {
-    font-size: 3.5rem;
-    
+    font-size: 3.5rem;    
     letter-spacing: 0.3rem;
     text-align: center;
     color: #ffcb05;
     -webkit-text-stroke: 6px #0c2461;
     padding: 3rem;
-
-    // text-shadow:
-    // $posStroke $posStroke $strokeBlur  #0c2461,
-    // $negStroke $negStroke $strokeBlur  #0c2461,
-    // $posStroke $negStroke $strokeBlur  #0c2461,
-    // $negStroke $posStroke $strokeBlur  #0c2461;
 }
 h2 {
     color: #0c2461;
 }
 
 // container
-.main img {
-    display: block;
-    margin: auto;
-    max-width: 100%;
+.main {
+    background-color: white;
+    padding: 1rem;
+    min-height: calc(100vh - 59px - 60px);
+
+    & img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
 }
+
 .comment {
     font-style: italic;
 }
@@ -91,17 +65,5 @@ td {
   justify-content: center;
 }
 
-// footer
-.footer {
-    text-align: right;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px; /* Set the fixed height of the footer here */
-    line-height: 55px; /* Vertically center the text there */
-    background-color: #141414;
-  }
-  .terms {
-      font-size: 0.8rem;
-  }
-  
+@import '_footer';
+@import '_breakdown';

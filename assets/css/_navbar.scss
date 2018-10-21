@@ -1,0 +1,15 @@
+.navbar-brand {
+    -webkit-text-stroke: 1px #0c2461;
+}
+
+.navbar, .dropdown-menu {
+    background-color: #0c2461!important;
+}
+.dropdown-item {
+    color: rgba(255,255,255,.5);
+
+    &:focus, &:hover {
+        background-color: inherit;
+        color: rgba(255,255,255,.75);
+    }
+}
