@@ -2,8 +2,12 @@
     <div class="row">
         <div id="timer" class="col-xl-6">
             <h2>Ladder timer</h2>
+            <h3>PHP</h3>
             <?php timeLeft(); ?>
             <p>The server is based on UTC time.</p>
+
+            <h3>JavaScript</h3>
+            <p id="js"></p>
         </div>
         <div id="prize" class="col-xl-6">
             <h2>Current prizes</h2>
@@ -26,22 +30,38 @@
         <!-- "Your ladder" -->
         <h2>Your ladder</h2>
         <form>
-            <label>Your number of points: </label><input id="points" type="number"> <span class="comment">(Values
-                higher than 2000 will be ignored)</span><br>
-            <label>Your streak: </label>
-            <input type="radio" name="streak" id="streak0"><label for="streak0">0</label>
-            <input type="radio" name="streak" id="streak1"><label for="streak1">1</label>
-            <input type="radio" name="streak" id="streak2"><label for="streak2">2</label>
-            <input type="radio" name="streak" id="streak3"><label for="streak3">3</label>
-            <input type="radio" name="streak" id="streak4"><label for="streak4">4</label>
-            <input type="radio" name="streak" id="streak5"><label for="streak5">5+</label><br>
+            <div class="row">
+                <div class="col-6">
+                    <label for="points">Your number of points:</label> <input id="points" type="number">
+                </div>
+                <div class="col-6">
+                    <span class="comment">Values above 2000 will be ignored</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label for="">Your win streak: </label>
+                    <input type="radio" name="streak" id="streak0"><label for="streak0">0</label>
+                    <input type="radio" name="streak" id="streak1"><label for="streak1">1</label>
+                    <input type="radio" name="streak" id="streak2"><label for="streak2">2</label>
+                    <input type="radio" name="streak" id="streak3"><label for="streak3">3</label>
+                    <input type="radio" name="streak" id="streak4"><label for="streak4">4</label>
+                    <input type="radio" name="streak" id="streak5"><label for="streak5">5+</label>
+                </div>
+                <div class="col-6">
+                    <span class="comment">Win streak represents how many matches you've won in a row.</span>
+                </div>
+            </div>
             <button type="button" id="estimate" class="btn btn-primary">Estimate</button>
         </form>
+        <div id="answer">
 
-        <p id="left">
+        </div>
+
+        
             <script>
                 pointsLeft();
             </script>
-        </p>
+        </div>
     </div>
 </div>

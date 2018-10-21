@@ -42,11 +42,7 @@ h2 {
     }
 }
 
-form {
-    background-color: #0000001a;
-    padding: 1rem;
-    border-radius: 4px;
-}
+@import '_calculator';
 
 .comment {
     font-style: italic;
