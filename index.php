@@ -1,19 +1,8 @@
 <?php
 include 'partials/header.php';
 include 'partials/navbar.php';
-?>
 
-<div class="container main">
-    <h1>How much grind left?</h1>
+include 'partials/_index.html';
 
-    <h2>What is this website?</h2>
-    <p>I made this tool to help me count <strong>how many matches I have left until <a href="https://www.pokemon.com/us/pokemon-tcg/play-online/">Pokémon TCGO</a>'s ladder resets and its prizes changes</strong>.</p>
-    
-    <p>Since a ladder lasts 3 weeks, reaching its end in time is possible, but sometimes planning helps getting the job done, especially if you don't have much free time. At first I used a Google Sheet that did something similar, but I soon realized it also had limits.</p>
-
-    <p>Now that I'm studying web developement, I decided to make it a website and share it with the world!</p>
-</div>
-
-<?php
 include 'partials/footer.php';
 ?>
