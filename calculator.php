@@ -42,16 +42,19 @@ function timeLeft() {
             
         </div>
     </div>
-    <div class="">
+    <div> <!-- "Your ladder" -->
         <h2>Your ladder</h2>
-        <label>Your number of points: </label><input id="points" type="number"> <span class="comment">(Values higher than 2000 will be ignored)</span><br>
-        <label>Your streak: </label>
-            <input type="radio" name="streak" id="streak0"><label for="streak0">0</label>
-            <input type="radio" name="streak" id="streak1"><label for="streak1">1</label>
-            <input type="radio" name="streak" id="streak2"><label for="streak2">2</label>
-            <input type="radio" name="streak" id="streak3"><label for="streak3">3</label>
-            <input type="radio" name="streak" id="streak4"><label for="streak4">4</label>
-            <input type="radio" name="streak" id="streak5"><label for="streak5">5+</label>
+        <form>
+            <label>Your number of points: </label><input id="points" type="number"> <span class="comment">(Values higher than 2000 will be ignored)</span><br>
+            <label>Your streak: </label>
+                <input type="radio" name="streak" id="streak0"><label for="streak0">0</label>
+                <input type="radio" name="streak" id="streak1"><label for="streak1">1</label>
+                <input type="radio" name="streak" id="streak2"><label for="streak2">2</label>
+                <input type="radio" name="streak" id="streak3"><label for="streak3">3</label>
+                <input type="radio" name="streak" id="streak4"><label for="streak4">4</label>
+                <input type="radio" name="streak" id="streak5"><label for="streak5">5+</label><br>
+            <button type="button" id="estimate" class="btn btn-primary">Estimate</button>
+        </form>
 
         <p id="left">
             <script>

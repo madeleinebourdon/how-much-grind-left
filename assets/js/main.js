@@ -1,8 +1,11 @@
 "use strict"
 $(document).ready(function () {
-    pointsLeft();
+    $("#estimate").on("click", function() {
+        pointsLeft()
+    });
 })
 function pointsLeft() {
+    
     var points = $("#points").val();
     if (points > 2000) { // ignore if points is higher than the maximum
         points = 2000;
@@ -17,7 +20,7 @@ function pointsLeft() {
 
     // insert here something about checking the streak and slightly changing the result, since a high streak match counts for several low streak ones.
 
-    var textLeft = "You need <strong>" + left + "</strong> points before reaching your objective, which corresponds to <strong>" + victories + "</strong> without any streak."
+    var textLeft = "You need <strong>" + left + "</strong> more points before reaching your objective, which corresponds to <strong>" + victories + "</strong> without any streak."
 
     $("#left").html(textLeft);
 }
