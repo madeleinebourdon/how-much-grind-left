@@ -5,6 +5,7 @@ $(document).ready(function () {
     $("#estimate").on("click", function () {
         pointsLeft()
     });
+    tooltips();
 })
 
 
@@ -54,9 +55,13 @@ function pointsLeft() {
     // insert here something about checking the streak and slightly changing the result, since a high streak match counts for several low streak ones.
 
 
-    var times = victory / (days -1);
+    var times = victory / (days - 1);
 
     var textLeft = "<p>You need <strong>" + left + "</strong> more points before reaching your objective, which corresponds to <strong>" + victories + "</strong> without any streak.</p><p>This means that if you played everyday, you would have to win <strong>" + times + " times a day</strong>, excluding today.</p>"
 
     $("#answer").html("<div id='left'>" + textLeft + "</div>");
+}
+
+function tooltips() {
+    $('.tooltip-img').tooltip();
 }
