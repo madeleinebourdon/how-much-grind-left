@@ -1,28 +1,105 @@
 <div class="container main">
+    <div class="filter">
+
+        <form method="GET">
+            <button type="button" class="btn" id="filter-btn">Filter your results</button>
+            <!-- bootstrap -->
+            <span class="long-filters">
+                <!-- filter by tier -->
+                <div class="btn-group btn-group-toggle" data-toggle="buttons" id="tiers">
+                    <label class="btn btn-info active" for="tier1">
+                        <input type="checkbox" name="tier1" id="tier1" checked> Tier 1
+                    </label>
+                    <label class="btn btn-info active" for="tier2">
+                        <input type="checkbox" name="tier2" id="tier2" checked> Tier 2
+                    </label>
+                    <label class="btn btn-info active" for="tier3">
+                        <input type="checkbox" name="tier3" id="tier3" checked>Tier 3
+                    </label>
+                </div>
+
+
+                <!-- filter by type -->
+                <div class="btn-group btn-group-toggle" data-toggle="buttons" id="type">
+                    <label class="btn btn-info active" for="coins">
+                        <input type="checkbox" name="coins" id="coins" checked> <img src="assets/img/icon/coin.png" alt="Pokécoins"
+                            title="Pokécoins" class="icon"> Pokécoins
+                    </label>
+                    <label class="btn btn-info active" for="tier2">
+                        <input type="checkbox" name="tier2" id="tier2" checked> <img src="assets/img/icon/uchest.png"
+                            alt="Uncommon chests" title="Uncommon chests" class="icon">
+                    </label>
+                    <label class="btn btn-info active" for="tier3">
+                        <input type="checkbox" name="tier3" id="tier3" checked><img src="assets/img/icon/ticket.png"
+                            alt="Event tickets icon" title="Event tickets" class="icon">
+                    </label>
+                    <label class="btn btn-info active" for="tier1">
+                        <input type="checkbox" name="tier1" id="tier1" checked> Booster packs
+
+                    </label>
+                    <label class="btn btn-info active" for="tier2">
+                        <input type="checkbox" name="tier2" id="tier2" checked> Pokémon cards
+                    </label>
+                    <label class="btn btn-info active" for="tier3">
+                        <input type="checkbox" name="tier3" id="tier3" checked> EX / GX
+                    </label>
+                    <label class="btn btn-info active" for="tier3">
+                        <input type="checkbox" name="tier3" id="tier3" checked> Supporter
+                    </label>
+                </div>
+
+
+
+                <!-- Tiers:
+                    <input type="checkbox" name="tier1" id="tier1" checked><label for="tier1">Tier 1</label>
+                    <input type="checkbox" name="tier2" id="tier2" checked><label for="tier2">Tier 2</label>
+                    <input type="checkbox" name="tier3" id="tier3" checked><label for="tier3">Tier 3</label><br> -->
+
+                <!-- <span>Items:
+                    <input type="checkbox" name="tier1" id="tier1" checked><label for="tier1"><img src="assets/img/icon/coin.png"
+                            alt="Pokécoins" title="Pokécoins" class="icon"></label>
+                    <input type="checkbox" name="tier2" id="tier2" checked><label for="tier2"><img src="assets/img/icon/uchest.png"
+                            alt="Uncommon chests" title="Uncommon chests" class="icon"></label>
+                    <input type="checkbox" name="tier3" id="tier3" checked><label for="tier3"><img src="assets/img/icon/ticket.png"
+                            alt="Event tickets icon" title="Event tickets" class="icon"></label>
+                    <input type="checkbox" name="tier1" id="tier1" checked><label for="tier1">Booster packs</label>
+                    <input type="checkbox" name="tier2" id="tier2" checked><label for="tier2">Regular pokémon cards</label>
+                    <input type="checkbox" name="tier3" id="tier3" checked><label for="tier3">EX / GX pokémon card</label>
+                    <input type="checkbox" name="tier3" id="tier3" checked><label for="tier3">Supporter card</label><br>
+                </span> -->
+            </span>
+
+        </form>
+
+        <?php
+         ?>
+
+
+    </div>
     <div class="table-responsive">
         <table class="table text-center">
             <thead>
                 <th>Date</th>
-                <th>10 VP</th>
-                <th>30 VP</th>
-                <th>50 VP</th>
-                <th>70 VP</th>
-                <th>100 VP</th>
-                <th>130 VP</th>
-                <th>170 VP</th>
-                <th>210 VP</th>
-                <th>270 VP</th>
-                <th>330 VP</th>
-                <th>410 VP</th>
-                <th>490 VP</th>
-                <th>590 VP</th>
-                <th>690 VP</th>
-                <th>820 VP</th>
-                <th>980 VP</th>
-                <th>1170 VP</th>
-                <th>1400 VP</th>
-                <th>1670 VP</th>
-                <th>2000 VP</th>
+                <th class="tier1">10<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier1">30<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier1">50<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier1">70<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier1">100<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier1">130<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier1">170<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier1">210<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier2">270<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier2">330<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier2">410<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier2">490<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier2">590<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier2">690<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier3">820<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier3">980<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier3">1170<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier3">1400<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier3">1670<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
+                <th class="tier3">2000<img src="assets/img/icon/thunder.png" alt="Versus Points" class="icon"></th>
             </thead>
             <tbody>
                 <?php 
@@ -31,70 +108,70 @@
                                                 foreach (array_reverse($currentPrizes) as $prize) { ?>
                 <tr>
                     <td>
-                        <?php echo $prize['date']; ?>
+                        <?php echo icon($prize['date']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['10']; ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['10']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['30']; ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['30']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['50'] ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['50']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['70']; ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['70']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['100']; ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['100']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['130']; ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['130']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['170']; ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['170']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['210']; ?>
+                    <td class="tier1">
+                        <?php echo icon($prize['210']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['270'] ?>
+                    <td class="tier2">
+                        <?php echo icon($prize['270']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['330']; ?>
+                    <td class="tier2">
+                        <?php echo icon($prize['330']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['410']; ?>
+                    <td class="tier2">
+                        <?php echo icon($prize['410']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['490']; ?>
+                    <td class="tier2">
+                        <?php echo icon($prize['490']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['590']; ?>
+                    <td class="tier2">
+                        <?php echo icon($prize['590']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['690']; ?>
+                    <td class="tier2">
+                        <?php echo icon($prize['690']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['820'] ?>
+                    <td class="tier3">
+                        <?php echo icon($prize['820']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['980']; ?>
+                    <td class="tier3">
+                        <?php echo icon($prize['980']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['1170']; ?>
+                    <td class="tier3">
+                        <?php echo icon($prize['1170']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['1400']; ?>
+                    <td class="tier3">
+                        <?php echo icon($prize['1400']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['1670']; ?>
+                    <td class="tier3">
+                        <?php echo icon($prize['1670']); ?>
                     </td>
-                    <td>
-                        <?php echo $prize['2000']; ?>
+                    <td class="tier3">
+                        <?php echo icon($prize['2000']); ?>
                     </td>
                     <?php } ?>
             </tbody>
         </table>
-        </div>
     </div>
+</div>

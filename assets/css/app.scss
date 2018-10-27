@@ -70,5 +70,20 @@ td {
   justify-content: center;
 }
 
+// "current prizes"
+.icon {
+    display: inline!important;
+    margin: inherit!important;
+}
+.tier1 {
+    background-color: #b8e994;
+}
+.tier2 {
+    background-color: #78e08f;
+}
+.tier3 {
+    background-color: #20bf6b;
+}
+
 @import '_footer';
 @import '_breakdown';

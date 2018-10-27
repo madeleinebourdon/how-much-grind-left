@@ -8,7 +8,7 @@ $(document).ready(function () {
     tooltips();
 })
 
-
+// how much time until ladder reset
 function timer() {
     var x = setInterval(function () {
         var countDownDate = new Date("October 30, 2018 01:00:00").getTime();
@@ -30,7 +30,7 @@ function timer() {
     }, 1000); // 1000 = update every second
 }
 
-
+// how many points to the top of the ladder
 function pointsLeft() {
     var countDownDate = new Date("October 30, 2018 01:00:00").getTime();
     var now = new Date().getTime();
@@ -62,6 +62,47 @@ function pointsLeft() {
     $("#answer").html("<div id='left'>" + textLeft + "</div>");
 }
 
+// bootstrap tooltips
 function tooltips() {
     $('.tooltip-img').tooltip();
 }
+
+// button to show the filters
+$("#filter-btn").on("click", function() {
+    $(".long-filters").toggle(1000);
+})
+
+// $("#filter-btn").click(function(){
+//     $(".long-filters").slideToggle(1000);
+// });
+
+// filters on the "current prizes" page
+$("#tiers input").change(function() { // when inputs inside of "tiers" change value
+    if ($('#tier1').is(':checked')) {
+        $(".tier1").show();
+    } else {
+        $(".tier1").hide();
+    }
+
+    if ($('#tier2').is(':checked')) {
+        $(".tier2").show();
+    } else {
+        $(".tier2").hide();
+    }
+
+    if ($('#tier3').is(':checked')) {
+        $(".tier3").show();
+    } else {
+        $(".tier3").hide();
+    }
+
+
+    $("#tiers input:checked").each(function() { // for everything checked
+        //$("ul#nav li." + $(this).val() + "").show();
+        
+    });
+    $("#tiers input:not(:checked)").each(function() { // for everything not checked
+        //$("ul#nav li." + $(this).val() + "").hide();
+        
+    });
+});

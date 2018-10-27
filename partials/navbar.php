@@ -6,13 +6,10 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav ml-1">
         <li class="nav-item">
             <a class="nav-link" href="index.php">Home</a>
         </li>
-
-    
-
       <li class="nav-item">
         <a class="nav-link" href="calculator.php">Calculator</a>
       </li>
@@ -28,6 +25,7 @@
         <a class="nav-link" href="credits.php">Credits</a>
       </li>
     </ul>
+
 
     
   </div>
