@@ -7,21 +7,21 @@
 
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-1">
-        <li class="nav-item">
+        <li class="nav-item <?= ($currentPageUrl === 'index') ? 'active' : ''; ?>">
             <a class="nav-link" href="index.php">Home</a>
         </li>
-      <li class="nav-item">
+      <li class="nav-item <?= ($currentPageUrl === 'calculator') ? 'active' : ''; ?>">
         <a class="nav-link" href="calculator.php">Calculator</a>
       </li>
       <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ladder prizes</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="currentprizes.php">Current prizes</a>
-        <a class="dropdown-item" href="history.php">Top prizes history</a>
+        <a class="dropdown-item  <?= ($currentPageUrl === 'currentprizes') ? 'active' : ''; ?>" href="currentprizes.php">Current prizes</a>
+        <a class="dropdown-item <?= ($currentPageUrl === 'history') ? 'active' : ''; ?>" href="history.php">Top prizes history</a>
       </div>
     </li>
 
-      <li class="nav-item">
+      <li class="nav-item <?= ($currentPageUrl === 'credits') ? 'active' : ''; ?>">
         <a class="nav-link" href="credits.php">Credits</a>
       </li>
     </ul>
