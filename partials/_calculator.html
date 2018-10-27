@@ -2,12 +2,8 @@
     <div class="row">
         <div id="timer" class="col-xl-6">
             <h2>Ladder timer</h2>
-            <h3>PHP</h3>
-            <?php timeLeft(); ?>
+            <p id="js">Loading reset countdown, please hold on...</p>
             <p>The server is based on UTC time.</p>
-
-            <h3>JavaScript</h3>
-            <p id="js"></p>
         </div>
         <div id="prize" class="col-xl-6">
             <h2>Current prizes</h2>
@@ -28,57 +24,59 @@
     </div>
     <div>
         <!-- "Your ladder" -->
-        <h2>Your ladder</h2>
+        <h2 class="text-center mt-4">Your ladder</h2>
         <form>
             <div class="col-xl-8 row mx-auto">
-                <div class="col-10 mx-auto">
+                <!-- width including the button-->
+                <div class="col-12">
+                    <!-- width without the buttton -->
                     <div class="row">
                         <!-- Points number-->
-                        <div class="col-11">
-                            <label for="points">Your number of points:</label> <input id="points" type="number">
+                        <div class="col-6 text-right">
+                            <label for="points">Your number of points:</label>
                         </div>
-                        <div class="col-1 align-right">
-                            <img src="assets/img/info.png" alt="Tooltip" class="tooltip-img" data-toggle="tooltip"
-                                data-placement="left" data-original-title="Values above 2000 will be ignored">
-
+                        <div class="col-6 row">
+                            <div class="col-11">
+                                <input id="points" type="number">
+                            </div>
+                            <div class="col-1 align-right">
+                                <img src="assets/img/info.png" alt="Tooltip" class="tooltip-img" data-toggle="tooltip"
+                                    data-placement="left" data-original-title="Values above 2000 will be ignored">
+                            </div>
                         </div>
                     </div>
+
                     <div class="row">
                         <!-- Win streak -->
-                        <div class="col-11">
+                        <div class="col-6 text-right">
                             <label for="">Your win streak: </label>
-                            <input type="radio" name="streak" id="streak0"><label for="streak0">0</label>
-                            <input type="radio" name="streak" id="streak1"><label for="streak1">1</label>
-                            <input type="radio" name="streak" id="streak2"><label for="streak2">2</label>
-                            <input type="radio" name="streak" id="streak3"><label for="streak3">3</label>
-                            <input type="radio" name="streak" id="streak4"><label for="streak4">4</label>
-                            <input type="radio" name="streak" id="streak5"><label for="streak5">5+</label>
                         </div>
-                        <div class="col-1">
-                            <img src="assets/img/info.png" alt="Tooltip" class="tooltip-img" data-toggle="tooltip"
-                            data-placement="left" 
-                                data-original-title="Win streak represents how many matches you've won in a row.">
+                        <div class="col-6 row">
+                            <div class="col-11">
+                                <input type="radio" name="streak" id="streak0"><label for="streak0">0</label>
+                                <input type="radio" name="streak" id="streak1"><label for="streak1">1</label>
+                                <input type="radio" name="streak" id="streak2"><label for="streak2">2</label>
+                                <input type="radio" name="streak" id="streak3"><label for="streak3">3</label>
+                                <input type="radio" name="streak" id="streak4"><label for="streak4">4</label>
+                                <input type="radio" name="streak" id="streak5"><label for="streak5">5+</label>
+                            </div>
+                            <div class="col-1">
+                                <img src="assets/img/info.png" alt="Tooltip" class="tooltip-img" data-toggle="tooltip"
+                                    data-placement="left" data-original-title="Win streak represents how many matches you've won in a row.">
+                            </div>
                         </div>
                     </div>
+
                     <div class="row">
-                            <button type="button" id="estimate" class="btn btn-primary mx-auto">Estimate</button>
-                        </div>
+                        <button type="button" id="estimate" class="btn btn-primary mx-auto">Estimate</button>
+                    </div>
                 </div>
-                
             </div>
         </form>
         <div id="answer">
-
-            </div>
+        </div>
     </div>
-
-
-
 </div>
-
-
-
-
 
 <script>
     pointsLeft();

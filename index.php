@@ -1,8 +1,9 @@
 <?php
-include 'partials/header.php';
-include 'partials/navbar.php';
 
-include 'partials/_index.html';
+require_once(__DIR__.'/partials/header.php');
+require_once(__DIR__.'/partials/navbar.php');
 
-include 'partials/footer.php';
+require_once(__DIR__.'/partials/_index.html');
+
+require_once(__DIR__.'/partials/footer.php');
 ?>

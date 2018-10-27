@@ -1,23 +1,11 @@
 <?php
-include 'partials/header.php';
-include 'partials/navbar.php';
+$currentPageTitle = 'Calculator';
 
-function timeLeft() {
-    $currentTimestamp = time();
-    $targetTimestamp = strtotime('30 October 2018 01:00');
+require_once(__DIR__.'/partials/header.php');
+require_once(__DIR__.'/partials/navbar.php');
 
-    $total = ($targetTimestamp - $currentTimestamp) / 60 / 60 / 24;
-    $days = round($total);
-    $hours = ($total - $days) * 24;
-    $test = round($hours);
-    $minutes = ($hours - $test) * 60;
 
-    $hours = round($hours);
-    $minutes = round($minutes);
+require_once(__DIR__.'/partials/_calculator.html');
 
-    echo "There are <strong>" . $days. ' days, ' . $hours . ' hours and '  . $minutes . ' minutes</strong> left before the next reset.';
-}
-
-include 'partials/_calculator.html';
-include 'partials/footer.php';
+require_once(__DIR__.'/partials/footer.php');
 ?>
