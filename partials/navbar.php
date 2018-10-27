@@ -19,8 +19,8 @@
       <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ladder prizes</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item disabled" href="#one">Current prizes</a>
-        <a class="dropdown-item" href="history.php">Prizes history</a>
+        <a class="dropdown-item" href="currentprizes.php">Current prizes</a>
+        <a class="dropdown-item" href="history.php">Top prizes history</a>
       </div>
     </li>
 

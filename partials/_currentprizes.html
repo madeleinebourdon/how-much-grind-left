@@ -1,0 +1,100 @@
+<div class="container main">
+    <div class="table-responsive">
+        <table class="table text-center">
+            <thead>
+                <th>Date</th>
+                <th>10 VP</th>
+                <th>30 VP</th>
+                <th>50 VP</th>
+                <th>70 VP</th>
+                <th>100 VP</th>
+                <th>130 VP</th>
+                <th>170 VP</th>
+                <th>210 VP</th>
+                <th>270 VP</th>
+                <th>330 VP</th>
+                <th>410 VP</th>
+                <th>490 VP</th>
+                <th>590 VP</th>
+                <th>690 VP</th>
+                <th>820 VP</th>
+                <th>980 VP</th>
+                <th>1170 VP</th>
+                <th>1400 VP</th>
+                <th>1670 VP</th>
+                <th>2000 VP</th>
+            </thead>
+            <tbody>
+                <?php 
+                                                $query = $db -> query('SELECT * FROM current_prizes');
+                                                $currentPrizes = $query->fetchAll(); 
+                                                foreach (array_reverse($currentPrizes) as $prize) { ?>
+                <tr>
+                    <td>
+                        <?php echo $prize['date']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['10']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['30']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['50'] ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['70']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['100']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['130']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['170']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['210']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['270'] ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['330']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['410']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['490']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['590']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['690']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['820'] ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['980']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['1170']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['1400']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['1670']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['2000']; ?>
+                    </td>
+                    <?php } ?>
+            </tbody>
+        </table>
+        </div>
+    </div>
