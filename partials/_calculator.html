@@ -1,3 +1,9 @@
+<?php 
+                    $query = $db -> query('SELECT * FROM top_prizes ORDER BY `top_prizes`.`date` DESC LIMIT 1;
+                    ');
+                    $topPrizes = $query->fetchAll(); 
+                    foreach ($topPrizes as $prize) { ?>
+
 <div class="container main">
     <div class="row">
         <div id="timer" class="col-xl-6">
@@ -7,16 +13,14 @@
         </div>
         <div id="prize" class="col-xl-6">
             <h2>Current prizes</h2>
-            <p>The current highest prize is <strong>Guzma</strong>.</p>
+            <p>The current highest prize is <strong><?php echo $prize['name']; ?></strong>.</p>
             <div class="row">
                 <div class="col-xl-4 col-md-4">
-                    <img src="https://cdn.bulbagarden.net/upload/thumb/0/0c/GuzmaDarknessthatConsumesLight56.jpg/180px-GuzmaDarknessthatConsumesLight56.jpg"
-                        alt="Guzma full art">
+                        
+                    <img src="assets/<?php echo $prize['image']; ?>" alt="<?php echo $prize['name'] . ' card'; ?>">
                 </div>
                 <div class="col-xl-8 col-md-8 description align-middle">
-                    <p>"Switch 1 of your opponent's Benched Pokémon with their Active Pokémon. If you do, switch your
-                        Active Pokémon with 1 of your Benched Pokémon."</p>
-                    <p class="comment">You may play only 1 Supporter card during your turn (before your attack).</p>
+                    <?php echo $prize['description'];} ?>
                 </div>
             </div>
 

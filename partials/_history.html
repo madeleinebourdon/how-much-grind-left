@@ -1,5 +1,45 @@
 <div class="container main">
-    <div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Artist</th>
+            </thead>
+            <tbody>
+                <?php 
+                    $query = $db -> query('SELECT * FROM top_prizes');
+                    $topPrizes = $query->fetchAll(); 
+                    foreach (array_reverse($topPrizes) as $prize) { ?>
+                <tr>
+                    <td>
+                        <?php echo $prize['date']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['name']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['type']; ?>
+                    </td>
+                    <td><img src=<?php echo "assets/" . $prize['image'] ?>></td>
+                    <td>
+                        <?php echo $prize['description']; ?>
+                    </td>
+                    <td>
+                        <?php echo $prize['illustration']; ?>
+                    </td>
+                    <?php } ?>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <!-- <div>
         <table id="history">
             <thead>
                  <th>Date</th>
@@ -23,5 +63,5 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
 </div>
