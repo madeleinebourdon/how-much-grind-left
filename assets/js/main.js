@@ -11,7 +11,7 @@ $(document).ready(function () {
 // how much time until ladder reset
 function timer() {
     var x = setInterval(function () {
-        var countDownDate = new Date("October 30, 2018 01:00:00").getTime();
+        var countDownDate = new Date("November 20, 2018 01:00:00").getTime();
         var now = new Date().getTime();
         var distance = countDownDate - now;
 
@@ -32,11 +32,11 @@ function timer() {
 
 // how many points to the top of the ladder
 function pointsLeft() {
-    var countDownDate = new Date("October 30, 2018 01:00:00").getTime();
+    var countDownDate = new Date("November 20, 2018 01:00:00").getTime();
     var now = new Date().getTime();
     var distance = countDownDate - now;
 
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24)); // how many days until the set date
 
 
     var points = $("#points").val();
